@@ -1,0 +1,20 @@
+version: '3'
+services:
+  www:
+    image: php:8.1.1-apache
+    environment:
+      - "TZ=America/Tijuana"
+    volumes:
+      - "./app/:/var/www/html"
+      # - "/etc/localtime:/etc/localtime:ro"
+      # - "/etc/timezone:/etc/timezone:ro"
+    ports:
+      - 8000:80
+    networks:
+      - lamp-docker
+    command: >
+      sh -c "docker-php-ext-install pdo pdo_mysql mysqli && apache2-foreground"
+  
+networks:
+  lamp-docker:
+    driver: bridge
