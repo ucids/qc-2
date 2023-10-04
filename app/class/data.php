@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('America/Tijuana');
-$server = 'host.docker.internal:5100';
+$server = '192.168.0.151:5100';
 $username = 'ucid';
 $password = '1974';
 $database = 'qc';

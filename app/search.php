@@ -87,7 +87,7 @@ require('class/user_data.php');
                                         <!--begin::Overlay-->
                                         <a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="<? echo $trackingInfo['parts'] ?>">
                                             <!--begin::Image-->
-                                            <div id="empaque" class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-325px" style="background-image:url('<?php echo $trackingInfo['parts'] ?>')">
+                                            <div id="empaque" class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-325px" style="background-image:url('<?php echo $trackingInfo['parts'] ?>?v=<?php echo time(); ?>')">
                                             </div>
                                             <!--end::Image-->
 
@@ -110,7 +110,7 @@ require('class/user_data.php');
                                         <!--begin::Overlay-->
                                         <a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="<? echo $trackingInfo['empaque'] ?>">
                                             <!--begin::Image-->
-                                            <div id="parts" class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-325px" style="background-image:url('<?php echo $trackingInfo['empaque'] ?>')">
+                                            <div id="parts" class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-325px" style="background-image:url('<?php echo $trackingInfo['empaque'] ?>?v=<?php echo time(); ?>')">
                                             </div>
                                             <!--end::Image-->
 
@@ -126,7 +126,7 @@ require('class/user_data.php');
                                 </div>
                                 <!--end::Col-->
                             </div>
-                        <?  } elseif (isset($_GET['trackingNumber'])) {
+                        <?php  } elseif (isset($_GET['trackingNumber'])) {
                         echo "<p>No results found for " . $_GET['trackingNumber'] . "</p>";
                     } ?>
                         <!--end::Row-->

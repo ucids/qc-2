@@ -33,34 +33,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['image_to_replace'])) 
         list(, $data) = explode(',', $data);
         $data = base64_decode($data);
 
-        if (empty($images[$chosenImageKey])) {
-            if ($chosenImageKey == "empaque") {
-                $imageName = $tracking . "-em.png";
-            } elseif ($chosenImageKey == "parts") {
-                $imageName = $tracking . "-sm.png";
-            }
-        } else {
-            $imagePathParts = explode('/', $images[$chosenImageKey]);
-            $imageName = end($imagePathParts);
-        }
-        $existingImage = $images['empaque'] ? $images['empaque'] : $images['parts'];
-
-        // Usa pathinfo() para obtener el directorio de la imagen existente
+        // Obtenemos la ruta y el nombre de la imagen original
+        $existingImage = $images[$chosenImageKey];
         $imageDirectory = pathinfo($existingImage, PATHINFO_DIRNAME);
-        
+        $imageName = pathinfo($existingImage, PATHINFO_BASENAME);
+
         // Construye la ruta del destino
         $fileDestination = $imageDirectory . "/" . $imageName;
+
         // Verificar si $fileDestination es válido antes de intentar escribir
         if (!empty($imageName) && !empty($fileDestination)) {
             if (file_put_contents($fileDestination, $data)) {
-                // Actualizar la ruta en la base de datos
-                $updateQuery = "UPDATE carros SET {$chosenImageKey} = '{$fileDestination}' WHERE tracking = '{$tracking}'";
-                if (mysqli_query($conexion, $updateQuery)) {
-                    $success = "Imagen reemplazada y base de datos actualizada con éxito.";
-                    echo "<script>window.location.href='edit.php?tracking=" . $tracking . "';</script>";
-                } else {
-                    $error = "La imagen se reemplazó, pero hubo un error al actualizar la base de datos.";
-                }
+                $success = "Imagen reemplazada con éxito.";
+                echo "<script>window.location.href='edit.php?tracking=" . $tracking . "';</script>";
             } else {
                 $error = "Ocurrió un error al reemplazar la imagen.";
             }
@@ -69,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['image_to_replace'])) 
         }
     }
 }
+
 ?>
 
 <?php

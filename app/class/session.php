@@ -17,7 +17,7 @@
 		$row = mysqli_fetch_assoc($result_user);
 		// Acceder a los campos de la tabla
         $user_id = intval($row['id_user']);
-
+		$rol = intval($row['fk_rol']);
 		$username = $row['username'];
 		$email = $row['email'];
 		$name = $row['nombre'];

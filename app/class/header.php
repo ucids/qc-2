@@ -21,7 +21,7 @@ if (isset($_SESSION['user_id'])) {
 
 <head>
 	<base href="index.php" />
-	<title>Katzkin | QC</title>
+	<title>DPS|Katzkin</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="Sistema de recolecion de evidencia para el departamento de Calidad" />
 	<meta name="keywords" content="katzkin, qc, tj" />
@@ -132,6 +132,16 @@ if (isset($_SESSION['user_id'])) {
 												</span>
 												<span class="menu-title">Cerrar Sesión</span>
 											</a>
+											<?php
+												if($rol == 3 || $rol == 1) { ?>
+												<a class="menu-link" href="session/registro.php" title="Crear un usuario Nuevo" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<span class="menu-icon">
+													<i class="ki-outline ki-rocket fs-2"></i>
+												</span>
+												<span class="menu-title">Dar de Alta Usuario</span>
+											</a>
+												<?}	
+											?>
 											<!--end:Menu link-->
 										</div>
 										<!--end:Menu item-->
@@ -259,7 +269,7 @@ if (isset($_SESSION['user_id'])) {
 								<div class="page-title d-flex align-items-center me-3">
 									<img alt="Logo" src="assets/media/logos/katzkin.png" class="h-60px me-5" />
 									<!--begin::Title-->
-									<h1 class="page-heading d-flex text-white fw-bolder fs-2 flex-column justify-content-center my-0">QC Dashboard
+									<h1 class="page-heading d-flex text-white fw-bolder fs-2 flex-column justify-content-center my-0">Digital Packaging System
 										<!--begin::Description-->
 										<span class="page-desc text-white opacity-50 fs-6 fw-bold pt-4">Control de Calidad</span>
 										<!--end::Description-->
