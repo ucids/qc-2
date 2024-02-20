@@ -1,0 +1,99 @@
+repo_name: ucids/qc-2
+report_id: 45056a5d46549792e6642da8d91ce983
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-20T18:57:08+00:00'
+requested_by: ucids
+provider: github
+branch: main
+detected_tools_count: 8
+tools:
+- name: Hack
+  description: A programming language for HHVM that interoperates seamlessly with
+    PHP
+  website_url: http://hacklang.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1208/download.png
+  detection_source_url: https://github.com/ucids/qc-2
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/ucids/qc-2
+  detection_source: Repo Metadata
+- name: PHP
+  description: A popular general-purpose scripting language that is especially suited
+    to web development
+  website_url: http://www.php.net/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source_url: https://github.com/ucids/qc-2
+  detection_source: Repo Metadata
+- name: MySQL
+  description: The world's most popular open source database
+  website_url: http://www.mysql.com
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source_url: https://github.com/ucids/qc-2/blob/main/docker-compose.yml
+  detection_source: docker-compose.yml
+  last_updated_by: Uriel Cid
+  last_updated_on: 2023-09-14 16:54:14.000000000 Z
+- name: Docker
+  description: Enterprise Container Platform for High-Velocity Innovation.
+  website_url: https://www.docker.com/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Virtual Machine Platforms & Containers
+  image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
+  detection_source_url: https://github.com/ucids/qc-2
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/ucids/qc-2
+  detection_source: Repo Metadata
+- name: PhpSpec
+  description: A  toolset for behavior driven development
+  website_url: http://www.phpspec.net/en/latest/
+  version: 8.1.0
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/3502/6b9dfb07681dee602dbdf75d9393f07c_400x400.png
+  detection_source_url: https://github.com/ucids/qc-2/blob/main/Dockerfile
+  detection_source: Dockerfile
+  last_updated_by: Uriel Cid
+  last_updated_on: 2023-09-14 16:54:14.000000000 Z
+- name: Phpmig
+  website_url: https://github.com/davedevelopment/phpmig
+  version: 8.1.0
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/1855/61351.jpeg
+  detection_source_url: https://github.com/ucids/qc-2/blob/main/Dockerfile
+  detection_source: docker-compose.yml
+  last_updated_by: Uriel Cid
+  last_updated_on: 2023-09-14 16:54:14.000000000 Z
